@@ -1,0 +1,29 @@
+
+\section{Discussion}\label{sec:discussion}
+
+\textbf{Classical vs.\ deep learning.}
+SVM and RF on MFCC features outperform our replicated CNN (76.7\% vs.\ 60.4\%).
+This does not imply that classical methods are generally better than deep learning for audio.
+The CNN was trained without data augmentation (colored noise and impulse responses), which Fai\ss{} and Stowell~\cite{faiss2023adaptive} report as essential for achieving 82\%.
+With augmentation, the CNN would likely outperform the classical models.
+
+\textbf{Replication gap.}
+Our replicated CNN achieves 60.4\% compared to 82\% in Fai\ss{} and Stowell~\cite{faiss2023adaptive}.
+The primary cause is the absence of augmentation.
+Secondary factors include training on a single random seed and slight differences in hardware (Apple MPS vs.\ CUDA).
+We document this limitation rather than attempting to close the gap, as it falls outside the scope of this project.
+
+\textbf{MFCC feature space.}
+The NMI of 0.58 shows that MFCC statistics encode substantial species-discriminative information.
+Low-order MFCC means, which capture the coarse spectral envelope, are the most informative features.
+This aligns with the acoustic properties of insect calls, where species are distinguished primarily by call frequency, chirp rate, and syllable structure.
+
+\textbf{Class imbalance.}
+The dataset is imbalanced (10--160 recordings per species).
+We use \texttt{class\_weight=balanced} for both SVM and RF to compensate.
+Macro-F1 is a more reliable metric than accuracy in this setting because it weights each class equally.
+
+\textbf{Interpretability trade-off.}
+RF provides explicit feature importance while the CNN does not.
+In ecological applications, understanding which acoustic cues drive a prediction is valuable for validating the model and building trust with domain experts.
+The classical pipeline is therefore a practical complement to the deep learning baseline, not just a weaker alternative.

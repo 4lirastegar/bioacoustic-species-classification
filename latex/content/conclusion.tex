@@ -1,0 +1,10 @@
+
+\section{Conclusion}\label{sec:conclusion}
+
+We evaluated two approaches for 66-class insect species classification on InsectSet66.
+The replicated log-mel CNN achieves 60.4\% test accuracy without data augmentation.
+SVM and Random Forest on MFCC statistical features achieve 76.7\% and 75.4\%, respectively, outperforming the unaugmented CNN while remaining fully interpretable.
+K-means clustering with NMI~$= 0.58$ confirms that MFCC features encode species-discriminative acoustic structure even without supervision.
+Random Forest feature importance shows that low-order MFCC means, which capture spectral envelope shape, are the most informative cues for insect species identification.
+
+Future work could close the gap to the published 82\% result~\cite{faiss2023adaptive} by enabling data augmentation, or explore transformer-based models such as PaSST, which have shown strong performance on related bioacoustic datasets.

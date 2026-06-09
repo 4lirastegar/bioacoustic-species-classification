@@ -1,0 +1,5 @@
+Model,Features,Test Acc,Macro-F1
+SVM (MFCC),MFCC stats,0.7671,0.7112
+Random Forest (MFCC),MFCC stats,0.7541,0.6373
+Mel-CNN (replicated),Log-mel,0.6037,0.5144
+Mel-CNN (Faiss et al.),Log-mel,~0.82,—

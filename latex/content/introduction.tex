@@ -1,0 +1,21 @@
+
+\section{Introduction}\label{sec:introduction}
+
+Insects play a critical role in ecosystems as pollinators, decomposers, and indicators of biodiversity.
+However, insect populations are declining globally, and monitoring them at scale is difficult.
+Passive acoustic recording is a practical approach: many insect species produce species-specific sounds that can be captured in the field.
+Automated recognition of these sounds enables large-scale, cost-effective biodiversity monitoring.
+
+The task of classifying insect species from audio is challenging.
+Species within the same genus produce acoustically similar calls, recordings vary in quality, and datasets are often imbalanced.
+InsectSet66~\cite{insectset66zenodo} provides a curated benchmark of 66 Orthoptera and Cicadidae species with official train, validation, and test splits.
+
+Fai\ss{} and Stowell~\cite{faiss2023adaptive} proposed a convolutional neural network (CNN) trained on log-mel spectrograms as the reference system for this dataset.
+Their 5-layer mel-CNN achieves 82\% test accuracy with data augmentation (colored noise and impulse responses).
+Classical machine learning methods, while generally less accurate than deep models, offer interpretability and are useful for understanding which acoustic features drive classification.
+
+In this project we:
+(1) replicate the log-mel CNN baseline from Fai\ss{} and Stowell~\cite{faiss2023adaptive};
+(2) extract MFCC features and apply k-means clustering to visualize the acoustic feature space;
+(3) train SVM and Random Forest classifiers on MFCC statistics;
+(4) analyze model interpretability through RF feature importance and confusion patterns.

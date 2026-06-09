@@ -1,0 +1,18 @@
+\begin{table}[!t]
+\caption{Classification performance on InsectSet66 (66 classes). Bold indicates best result per column among our models.}
+\label{table:results}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrrr}
+\toprule
+\multirow{2}{*}{Model} & \multirow{2}{*}{Features} & \multicolumn{2}{c}{Validation} & \multicolumn{2}{c}{Test} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6}
+ &  & Acc & Macro-F1 & Acc & Macro-F1 \\
+\midrule
+SVM (RBF)            & MFCC           & 0.744 & \textbf{0.633} & \textbf{0.767} & \textbf{0.711} \\
+Random Forest        & MFCC           & \textbf{0.748} & 0.601 & 0.754 & 0.637 \\
+Mel-CNN (replicated) & Log-mel        & ---   & ---   & 0.604 & 0.514 \\
+Mel-CNN~\cite{faiss2023adaptive} & Log-mel + aug. & 0.81 & --- & 0.82 & 0.74 \\
+\bottomrule
+\end{tabular}}
+\end{table}

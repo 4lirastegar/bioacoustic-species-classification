@@ -1,0 +1,26 @@
+# Local dataset (keep on disk, do not commit)
+data/
+!data/66_species_order.csv
+data/cache/
+
+# Large cached feature files (regeneratable, too large for git)
+results/**/*.npz
+results/**/*.pth
+
+# Python / notebooks
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# OS
+.DS_Store
+Archive.zip
+
+# LaTeX build artifacts
+latex/*.aux
+latex/*.log
+latex/*.bbl
+latex/*.blg
+latex/*.out
+latex/*.pdf

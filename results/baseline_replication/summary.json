@@ -1,0 +1,16 @@
+{
+  "frontend": "MEL",
+  "layers": 5,
+  "seed": 1000,
+  "fast_dev": false,
+  "augmentation": false,
+  "best_epoch": 20,
+  "train_chunks": 41312,
+  "val_chunks": 12587,
+  "test_chunks": 10391,
+  "accuracy": 0.6036955057261091,
+  "macro_f1": 0.5144499288868418,
+  "macro_precision": 0.5695086415900913,
+  "macro_recall": 0.5317290497813141,
+  "paper_reference_mel_insectset66": "~0.78 median (4 conv) / ~0.82 (5 conv) accuracy \u2014 Faiss et al. 2023 Table 4"
+}

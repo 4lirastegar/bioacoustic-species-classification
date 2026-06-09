@@ -1,0 +1,13 @@
+
+\begin{abstract}
+This project investigates acoustic insect species classification on InsectSet66, a benchmark of 66 Orthoptera and Cicadidae species.
+We extract Mel-frequency cepstral coefficients (MFCC) and log-mel spectrograms from 5-second audio segments and evaluate two complementary approaches.
+First, we replicate the mel-spectrogram CNN baseline of Faiss et al.~\cite{faiss2023adaptive}, achieving 60.4\% test accuracy.
+Second, we apply k-means clustering, Support Vector Machines (SVM), and Random Forest (RF) on MFCC statistical features.
+SVM achieves 76.7\% test accuracy and 0.71 macro-F1, outperforming the unaugmented CNN.
+RF feature importance provides interpretable insight into which cepstral coefficients drive species separation.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Insect sound classification, bioacoustics, MFCC, log-mel spectrogram, InsectSet66, SVM, Random Forest
+\end{IEEEkeywords}
