@@ -8,8 +8,8 @@ We conduct a comparative study between a deep learning CNN baseline and classica
 >
 > | File | Description | Link |
 > |------|-------------|------|
-> | `baseline_replication.ipynb` | Replicated CNN baseline from the InsectSet66 paper | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AliRastgarMojarad/insect-classification/blob/main/baseline_replication.ipynb) |
-> | `insect_classification.ipynb` | Our MFCC + SVM/RF/k-means experiments | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AliRastgarMojarad/insect-classification/blob/main/insect_classification.ipynb) |
+> | `baseline_replication.ipynb` | Replicated CNN baseline from the InsectSet66 paper | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/4lirastegar/bioacoustic-species-classification/blob/main/baseline_replication.ipynb) |
+> | `insect_classification.ipynb` | Our MFCC + SVM/RF/k-means experiments | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/4lirastegar/bioacoustic-species-classification/blob/main/insect_classification.ipynb) |
 > | `latex/` | IEEE-format research report (LaTeX source) | — |
 
 ## Installation and Usage
